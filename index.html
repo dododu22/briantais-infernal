@@ -30,12 +30,15 @@
             text-align: center;
         }
 
+        /* --- RÉDUCTION DE L'AFFICHE ICI --- */
         .poster {
-            max-width: 100%;
+            max-width: 50%; /* L'affiche prendra la moitié de la page max */
+            height: auto;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             margin-bottom: 30px;
         }
+        /* --- --- */
 
         h1 {
             color: var(--orange);
@@ -81,16 +84,29 @@
             min-width: 150px;
         }
 
-        .map-container {
-            margin-top: 30px;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        .garmin-button {
+            display: inline-block;
+            background: #e67e22;
+            color: black !important; /* Force le texte noir */
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 25px; /* Espace avant l'image */
+            transition: background 0.3s;
         }
 
-        iframe {
+        .garmin-button:hover {
+            background: #f39c12;
+        }
+
+        .route-screenshot {
             max-width: 100%;
-            border: none;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #444;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
         footer {
@@ -104,7 +120,7 @@
 <body>
 
     <div class="container">
-        <img src="image_a117d7.jpeg" alt="L'Infernale Briantais Poster" class="poster">
+        <img src="image_a117d7.jpg" alt="L'Infernale Briantais Poster" class="poster">
 
         <h1>L'Infernale Briantais</h1>
         <div class="date-badge">11 JUILLET 2026 - SAINT-MALO</div>
@@ -128,15 +144,14 @@
             </div>
         </div>
 
-        <h3>📍 Le Parcours</h3>
-        <div class="card" style="text-align: center;">
+        <div class="card">
             <h3>📍 Le Parcours</h3>
             <p>Consulte le tracé détaillé et le dénivelé directement sur Garmin Connect :</p>
-            <a href="https://connect.garmin.com/modern/course/432919567" target="_blank" 
-               style="display: inline-block; background: #e67e22; color: black; padding: 15px 25px; 
-                      text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 10px;">
+            <a href="https://connect.garmin.com/modern/course/432919567" target="_blank" class="garmin-button">
                Voir le parcours sur Garmin
             </a>
+            
+            <img src="parcours.png" alt="Aperçu du parcours de 7km" class="route-screenshot">
         </div>
 
         <footer>
