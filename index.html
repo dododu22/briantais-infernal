@@ -63,7 +63,7 @@
             border-radius: 15px;
             margin-bottom: 30px;
             border: 1px solid #444;
-            text-align: left; /* Alignement à gauche pour le texte informatif */
+            text-align: left;
         }
 
         .card h3 {
@@ -104,6 +104,7 @@
         .info-list li span {
             margin-right: 15px;
             font-size: 1.2rem;
+            min-width: 25px;
         }
 
         .garmin-button {
@@ -120,8 +121,16 @@
             text-align: center;
         }
 
-        .garmin-button:hover {
-            background: #f39c12;
+        .map-wrapper {
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid #444;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 100%;
         }
 
         .route-screenshot {
@@ -151,17 +160,23 @@
         <div class="date-badge">11 JUILLET 2026 - SAINT-MALO</div>
 
         <div class="card" style="text-align: center;">
-            <p><strong>Le concept :</strong> Une boucle de 7km à faire en moins d'une heure. On repart chaque heure. Le dernier debout l'emporte.</p>
+            <p><strong>Le concept :</strong> Une boucle de 7km à faire en moins d'une heure. On repart chaque heure.</p>
+            <p style="font-size: 1.4rem; color: var(--orange);"><strong>Départ de la première boucle à 10h00 pile !</strong></p>
+            <p><i>Le dernier debout l'emporte.</i></p>
         </div>
 
         <div class="card">
             <h3>ℹ️ Informations Pratiques</h3>
             <ul class="info-list">
-                <li><span>🍲</span> <strong>Ravito :</strong> L'événement est en auto-suffisance. Prévoyez de quoi manger et boire pour tenir la durée (solide, liquide, plaisir).</li>
-                <li><span>🪑</span> <strong>Confort :</strong> Apportez votre chaise de camping, une couverture et tout ce qu'il faut pour optimiser vos 15-20 min de repos entre chaque tour.</li>
-                <li><span>🔦</span> <strong>Éclairage :</strong> Lampe frontale obligatoire si vous prévoyez de courir après le coucher du soleil !</li>
-                <li><span>🚗</span> <strong>Accès :</strong> [Préciser le lieu exact de rendez-vous ici].</li>
+                <li><span>🍲</span> <strong>Ravito :</strong> L'événement est en auto-suffisance. Prévoyez de quoi manger et boire (solide, liquide, plaisir).</li>
+                <li><span>🪑</span> <strong>Confort :</strong> Apportez votre chaise de camping et une couverture pour les inter-tours.</li>
+                <li><span>🔦</span> <strong>Éclairage :</strong> Lampe frontale obligatoire pour les boucles nocturnes.</li>
+                <li><span>📍</span> <strong>Accès :</strong> Boulevard du Rosais, Saint-Malo.</li>
             </ul>
+
+            <div class="map-wrapper">
+                <iframe id="map-canvas" width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=boulevard%20du%20rosais%20st%20malo&t=&z=14&ie=UTF8&iwloc=B&output=embed"></iframe>
+            </div>
         </div>
 
         <div class="card">
@@ -171,27 +186,4 @@
             <div class="patch-section">
                 <div class="patch-item">
                     <strong>Le Partant</strong><br>
-                    Patch souvenir dès le 1er tour validé.
-                </div>
-                <div class="patch-item" style="border-style: solid;">
-                    <strong>Le Survivant</strong><br>
-                    Le patch brodé "Gold" pour le vainqueur.
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <h3>📍 Le Parcours</h3>
-            <a href="https://connect.garmin.com/modern/course/432919567" target="_blank" class="garmin-button">
-               Voir le parcours sur Garmin
-            </a>
-            <img src="parcours.png" alt="Aperçu du parcours de 7km" class="route-screenshot">
-        </div>
-
-        <footer>
-            Organisé entre potes - Respectez les sentiers et la nature !
-        </footer>
-    </div>
-
-</body>
-</html>
+                    Patch souvenir dès le 1
