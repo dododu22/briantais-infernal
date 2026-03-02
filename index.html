@@ -103,11 +103,15 @@
             text-align: center;
         }
 
-        .map-wrapper {
+        .form-wrapper, .map-wrapper {
             margin-top: 20px;
             border-radius: 10px;
             overflow: hidden;
             border: 2px solid #444;
+        }
+
+        .form-wrapper {
+            background: #f4f4f4; /* Fond clair pour le formulaire Google */
         }
 
         .route-screenshot {
@@ -143,6 +147,14 @@
         </div>
 
         <div class="card">
+            <h3>📝 Inscription</h3>
+            <p style="text-align: center;">Confirme ta présence et indique ton matériel :</p>
+            <div class="form-wrapper">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe9jSIjFMCqqcRvSBJ_8Au-JBqp6i9lmeZsWX7awICVA4DgLw/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+            </div>
+        </div>
+
+        <div class="card">
             <h3>🎁 Surprise & Récompenses</h3>
             <div style="text-align: center;">
                 <p style="font-size: 1.2rem; color: var(--orange);"><strong>⚠️ CONSIGNE OBLIGATOIRE :</strong></p>
@@ -154,13 +166,13 @@
         <div class="card">
             <h3>ℹ️ Informations Pratiques</h3>
             <ul class="info-list">
-                <li><span>🍲</span> <strong>Ravito :</strong> L'événement est en auto-suffisance. Prévoyez de quoi manger et boire (solide, liquide, plaisir).</li>
-                <li><span>🪑</span> <strong>Confort :</strong> Apportez votre chaise de camping et une couverture pour les inter-tours.</li>
-                <li><span>📍</span> <strong>Accès :</strong> Boulevard du Rosais, Saint-Malo.</li>
+                <li><span>🍲</span> <strong>Ravito:</strong> L'événement est en auto-suffisance. Prévoyez de quoi manger et boire (solide, liquide, plaisir).</li>
+                <li><span>🪑</span> <strong>Confort:</strong> Apportez votre chaise de camping et une couverture pour les inter-tours.</li>
+                <li><span>📍</span> <strong>Accès:</strong> Boulevard du Rosais, Saint-Malo.</li>
             </ul>
 
             <div class="map-wrapper">
-                <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=0%20boulevard%20du%20rosais%20st%20malo&t=&z=14&ie=UTF8&iwloc=B&output=embed"></iframe>
+                <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=boulevard%20du%20rosais%20st%20malo&t=&z=14&ie=UTF8&iwloc=B&output=embed"></iframe>
             </div>
         </div>
 
